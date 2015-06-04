@@ -1,0 +1,55 @@
+@font-face {
+font-family: Weston;
+src: url("../fonts/weston/WestonLightFree.otf");
+}
+
+@font-face {
+font-family: RalewayThin;
+src: url("../fonts/raleway/RalewayThin.otf");
+}
+
+@font-face {
+font-family: Five;
+src: url("../fonts/5ive/FiveMinutes.otf");
+}
+
+
+@font-face {
+font-family: OstrichRegular;
+src: url("../fonts/OstrichRegular.ttf");
+}
+
+@font-face {
+font-family: OstrichLight;
+src: url("../fonts/ostrich-sans/OstrichLight.ttf");
+}
+
+@font-face {
+font-family: Goudy;
+src: url("../fonts/Goudy-Bookletter-1911/goudy_bookletter_1911-webfont.ttf");
+}
+
+@font-face {
+font-family: Yasashisa;
+src: url("../fonts/07Yasashisa/yasashisa.ttf");
+}
+
+@font-face {
+font-family: Aller;
+src: url("../fonts/Aller_Rg.ttf");
+}
+
+@font-face {
+font-family: BurstMyBubble;
+src: url("../fonts/burst_my_bubble/BurstMyBubble.ttf");
+}
+
+@font-face {
+font-family: Cantarell;
+src: url("../fonts/Cantarell/Cantarell-Regular.ttf");
+}
+
+@font-face {
+font-family: ChunkFive;
+src: url("../fonts/ChunkFive/ChunkFive.otf");
+}

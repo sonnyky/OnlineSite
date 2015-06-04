@@ -25,6 +25,7 @@ var db;
 //app.configure(function(){
 //  app.set('port', process.env.PORT || 3000);
   app.set('views', __dirname + '/views');
+  app.use('scripts', express.static(path.join(__dirname, '/scripts')));
   app.set('view engine', 'jade');
   app.set('view options', {layout: false});
   app.use(favicon(path.join(__dirname,'public','images','icon.ico')));
@@ -55,14 +56,23 @@ mongo.MongoClient.connect(MONGODB_URI, function(err, database) {
 //Routes
 
 //index
+
 app.get('/', function(req, res){
-     db.collection('employees').find().toArray(function(err, emps) {
+     //db.collection('employees').find().toArray(function(err, emps) {
     res.render('index', {
       title: 'Employees',
-      employees:emps
+      //employees:emps
     });
-  });
+  //});
 });
+
+app.get('/profile', function(req, res){
+    res.render('profile', { 
+      title: 'Profile' 
+    });
+});
+
+
 /*
 //new employee
 app.get('/employee/new', function(req, res) {

@@ -1,0 +1,144 @@
+div#radarGraph {
+	width : 100%;
+	height: 300px;
+	color:#FFFFFF
+}
+
+h1{
+	margin-top: 5px;
+  	margin-left: 5px;
+  	color: #1b9ec9;
+}
+h2{
+	margin-top:5px; 
+	margin-left:5px;
+}
+
+#lang_sel{
+	position:absolute;
+	top: 120px;
+	right:20px;
+}
+
+#contacts{
+	color:#FFFFFF;
+	font-size:0.7em;
+}
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+
+.country_flag{
+	width:30px;
+	height:20px;
+}
+
+/*The DIV that shows full name on top of page*/
+div#introDiv{
+	height:30%; color:#FFFFFF; margin-bottom:10px;
+}
+
+/*The p tag that shows full name on top of page*/
+p#nameText{
+	font-size:80px;
+	margin-left:2%;
+	color:#1b9ec9;
+}
+
+/*The DIV that shows photo*/
+div#photo{
+	width:50%;
+	float:left;
+	margin-right: 5px;
+}
+div#photo img{
+	width: 100%;
+}
+
+/*The div class that acts as resume entry wrapper*/
+div.entry{
+	width:100%;
+	position:relative; 
+	margin-top:1%; 
+	color:#FFFFFF
+}
+div.entryTitle{
+	width:20%;
+	font-size:0.5em;
+	background-color:#383838; 
+	margin-right:1%;
+}
+div.entryContent{
+	font-size:0.6em; width:75%;
+}
+
+body
+{
+	background-color:#494545;
+	margin-top:0px;
+	margin-bottom:0px;
+	
+	font-family:Aller;
+	font-size:20px;
+}
+
+/****************************************************************************For layout on tablets in portrait mode******************************************************************/
+@media screen and (max-width: 800px)
+{
+	div.entryTitle{
+		width:100%;font-size:0.45em;
+	}
+	div.entryContent{
+		font-size:0.5em; width:100%;
+	}
+	div#introDiv{
+		height:10%;
+	}	
+	p#nameText{
+		font-size:45px;
+	}
+	#contacts:after {
+		visibility: hidden;
+		display: block;
+		font-size: 0;
+		content: " ";
+		clear: both;
+		height: 0;
+	}
+	#radarGraph{
+		display:none;
+	}
+}
+
+/* Desktops and laptops ----------- */
+@media only screen 
+and (min-width : 1224px) {
+	/* Styles */
+	div#photo{
+		width:20%;
+	}
+	#contacts:after {
+		visibility: hidden;
+		display: block;
+		font-size: 0;
+		content: " ";
+		clear: both;
+		height: 0;
+	}
+	/*The div class that acts as resume entry wrapper*/
+	div.entry{
+		width:100%;
+	}
+	div.entryTitle{
+		width:100%;font-size:0.5em;
+	}
+	div.entryContent{
+		font-size:0.6em; width:100%;
+	}
+
+}

@@ -1,0 +1,139 @@
+body{
+  font-family: OstrichRegular;
+}
+#welcome-text-div{
+  margin-left: auto;
+  margin-right: auto;
+  margin-top:10%;
+  padding-top:5%;
+  padding-bottom: 5%;
+  background-color:#494545;
+  text-align:center;
+  color:#ffffff;
+}
+.landing_page a{
+    text-decoration: none;
+}
+
+.top_nav_area{
+  position:relative;
+  height:10%;
+  background-color:#ecdede;
+}
+
+/*Smartphones, portrait, using max-width;320px converted into EM */
+@media only screen
+and (max-device-width : 20em){
+  #main-canvas{
+    width : 18em;
+    height : auto;
+    border : 1px solid #00ff00;
+  }
+  #welcome-text-div{
+    font-size: 40px;
+  }
+  .menu_div nav ul li{
+   font-size: 25px;
+ }
+}
+
+/*Smartphones, landscape, using max-width;320px converted into EM */
+@media only screen
+and (max-device-width : 40em)
+and (min-device-width : 21em){
+  #main-canvas{
+    width : 38em;
+    height : auto;
+    border : 1px solid #ffff00;
+  }
+  #welcome-text-div{
+    font-size: 50px;
+  }
+}
+
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) {
+  /* Styles */
+}
+
+/* iPads (landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) {
+  /* Styles */
+   #welcome-text-div{
+    font-size: 80px;
+  }
+  .button{
+    font-size: 30px;
+  }
+}
+
+/* iPads (portrait) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
+  /* Styles */
+   #welcome-text-div{
+    font-size: 70px;
+  }
+}
+
+/* Desktops and laptops ----------- */
+@media only screen 
+and (min-width : 1224px) {
+  /* Styles */
+   #welcome-text-div{
+    font-size: 100px;
+  }
+}
+
+/* Large screens ----------- */
+@media only screen 
+and (min-width : 1824px) {
+  /* Styles */
+}
+
+/* iPhone 4 ----------- */
+@media
+only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {
+  /* Styles */
+}
+
+
+div.landing_page#background
+{
+  background-color:#ecdede;
+  width:100%;
+  height:auto;
+  position:relative;
+}
+
+div.freeDiv {
+  border:dotted;
+  border-color:#000000;
+  left:50%;
+  position:absolute;
+}
+
+
+
+div.transbox
+{
+  width:250px;
+  height:20px;
+  margin-left:3%;
+  margin-top:255px;
+  background-color:#ffffff;
+  position:absolute;
+  font-family:Weston, Sans-Serif;
+  font-size:x-large;
+  opacity:0.9;
+  filter:alpha(opacity=9); /* For IE8 and earlier */
+}

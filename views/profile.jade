@@ -1,0 +1,79 @@
+extends layout
+
+block append head
+	link(rel='stylesheet', href='/stylesheets/design_profile.css')
+	link(rel='stylesheet', href='/stylesheets/common.css')
+	link(rel='stylesheet', href='/stylesheets/smartphones-portrait.css')
+	link(rel="stylesheet" type="text/css" href='http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css')
+
+block content	
+	#introDiv
+		p#nameText Sonny Kurniawan
+	#photo
+		img(src="images/profile.jpg")
+	#language_selector
+		select(id="lang_sel")
+			option(value="english") English
+			option(value="japanese") Japanese
+			option(value="chinese") Chinese
+			option(value="indonesian") Indonesian
+	#contacts
+		p
+			img(src="../images/mail.png" onMouseOver="this.src='../images/mail_hover.png'" onmouseout="this.src='../images/mail.png'" style="vertical-align:text-middle")
+			| blitzkrieg.burner@gmail.com
+
+			br
+			img(src="../images/phone.png" onMouseOver="this.src='../images/phone_hover.png'" onmouseout="this.src='../images/phone.png'" style="vertical-align:text-middle") 
+			| 090-1958-6549
+
+	#english_wrapper
+		#firstEntry.entry
+			#aboutMe.entryTitle
+				h1 About Me
+			#summary.entryContent
+				h2 I am a software engineer working in Japan interested in all things related to software and programming.
+				I did a major in Robotics focusing on biped humanoid robots and some computer vision.
+				I enjoy coding and is always looking to upgrade my current skills and learn new ones.
+				When not in front of my computer I enjoy tennis, travelling, and also reading a good book.
+
+
+			#secondEntry.entry
+				#education.entryTitle
+					h1 Education
+				#eduSummary.entryContent
+					h2 2002-2003 : Osaka University of Foreign Languages
+					h2 2003-2007 : Tohoku University, Faculty of Engineering.
+					br
+					Mechanical Engineering Major
+					h2 2007-2009 : Tohoku University, Graduate School of Engineering.
+					br 
+					| Space Robotics Labs
+
+			#thirdEntry.entry
+				#workExperience.entryTitle
+					h1 Experience
+				#expSummary.entryContent
+					h2 2009-2012 : Sony Corporation, VAIO Business Group
+					h2 2012-Jul 2013 : Sony Corporation, br
+					Information Technology Development Department
+					h2 Jul 2013-Apr 2015 : Pokelabo, Game Development Department
+					h2 May 2015-Current : Rakuten, Japan Mall Group, Smart Device Development Team
+
+			#fourthEntry.entry
+				#language.entryTitle
+					h1 Language
+				#langSummary.entryContent
+					h2 Indonesian (Native Level)
+					h2 English (Native Level)
+					h2 Japanese (Native Level)
+					h2 Chinese (Everyday use)
+
+			#fifthEntry.entry
+				#skills.entryTitle
+					h1 Programming
+				#skillsSummary.entryContent
+					h2 C, C++
+					h2 Java (Android)
+					h2 HTML/CSS, Javascript
+					h2 OpenCV, OpenGL, jQuery, and various other libraries
+					h2 NodeJS

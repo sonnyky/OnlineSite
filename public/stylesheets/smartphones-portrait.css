@@ -1,0 +1,44 @@
+	/****************************************************************************For layout on smartphones in portrait mode******************************************************************/
+@media screen and (max-width: 480px)
+{
+	p#nameText{
+		font-size:35px;
+		color: #FFFFFF;
+		font-family: OstrichRegular;
+		text-align: center
+	}
+	div#photo{
+		position: absolute;
+		top: 40px;
+		left: 40px;
+		font-size:0.6em;
+		width: 30%;
+	}
+	
+	div.entry{
+		width:100%;
+	}
+	div.entryTitle{
+		width:100%;
+		font-size:0.75em;
+	}
+	div.entryContent{
+		font-size:0.7em; 
+		width:100%;
+	}
+	div#introDiv{
+		height:150px;
+		background: url('../images/header_bg.jpg');
+		background-repeat: no-repeat;
+		background-size: cover;
+		margin-bottom: 25px;
+	}
+	#language_flags:after {
+		visibility: hidden;
+		display: block;
+		font-size: 0;
+		content: " ";
+		clear: both;
+		height: 0;
+	}
+}
