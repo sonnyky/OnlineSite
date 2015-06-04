@@ -1,0 +1,18 @@
+extends layout
+
+block content
+	#top-nav-page.top_nav_page
+		#navigation-menu.menu_div
+			#work-button.button
+				p Work
+			#others-button.button
+				p Others
+		#background.landing_page
+			#welcome-text-div Thank you for taking the time to get to know me
+			img(src="images/buildings.png" style="width:90%; margin-top:10%; margin-left:5%; bottom:50px")
+block scripts
+	script(src="/scripts/topPage.js")
+	script.
+		$(document).ready(function(){
+			new page.pageControl()
+		})	
