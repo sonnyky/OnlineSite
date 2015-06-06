@@ -38,6 +38,16 @@ h2{
 	height:20px;
 }
 
+#japanese_wrapper{
+	display: none
+}
+#indonesian_wrapper{
+	display: none
+}
+#mandarin_wrapper{
+	display: none;
+}
+
 /*The DIV that shows full name on top of page*/
 div#introDiv{
 	height:30%; color:#FFFFFF; margin-bottom:10px;
