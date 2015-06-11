@@ -24,8 +24,9 @@ EmployeeProvider = function(appInstance) {
 
 EmployeeProvider.prototype.getCollection= function(callback) {
 var my = this;
-console.log(app.db);
+
   app.db.collection('employees', function(error, employee_collection) {
+    
     if( error ) {
      console.log("Something happened. Could not getCollection");
       console.log(error); 
@@ -54,7 +55,7 @@ EmployeeProvider.prototype.findById = function(id, callback) {
     this.getCollection(function(error, employee_collection) {
       if( error ) callback(error)
       else {
-        employee_collection.findOne({_id: employee_collection.db.bson_serializer.ObjectID.createFromHexString(id)}, function(error, result) {
+        employee_collection.findOne({_id: ObjectID(id)}, function(error, result) {
           if( error ) callback(error)
           else callback(null, result)
         });
@@ -89,7 +90,7 @@ EmployeeProvider.prototype.update = function(employeeId, employees, callback) {
       if( error ) callback(error);
       else {
         employee_collection.update(
-					{_id: employee_collection.db.bson_serializer.ObjectID.createFromHexString(employeeId)},
+					{_id: ObjectID(employeeId)},
 					employees,
 					function(error, employees) {
 						if(error) callback(error);
@@ -109,7 +110,9 @@ EmployeeProvider.prototype.delete = function(employeeId, callback) {
     }
 		else {
 			employee_collection.remove(
-				{_id: employee_collection.db.bson_serializer.ObjectID.createFromHexString(employeeId)},
+			//	{_id: employee_collection.db.bson_serializer.ObjectID.createFromHexString(employeeId)},
+      	{_id: ObjectID(employeeId)},
+		
 				function(error, employee){
 					if(error) callback(error);
 					else callback(null, employee)
