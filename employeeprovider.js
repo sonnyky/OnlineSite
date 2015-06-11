@@ -1,4 +1,5 @@
-var Db = require('mongodb').Db;
+
+var mongo = require('mongodb');
 var connect = require('connect');
 var Connection = require('mongodb').Connection;
 var Server = require('mongodb').Server;
@@ -6,24 +7,33 @@ var BSON = require('mongodb').BSON;
 var ObjectID = require('mongodb').ObjectID;
 var mongouri = "mongodb://sonny_yap:mongolabpa55@ds039421.mongolab.com:39421/userdb"
 
-var cur_db = new Db();
+//placeholder for app instance
+var app;
 
-EmployeeProvider = function() {
-  var my=this;
-  mongo.connect(mongouri, {}, function(error, db){
-   this.db = db;
-    // console.log will write to the heroku log which can be accessed via the 
-    // command line as "heroku logs"
+//When instantiating provider class, pass the app instance as well
+//So we don't lose the app scope
+EmployeeProvider = function(appInstance) {
+  var my=this; 
+  mongo.connect(mongouri, function(err, database){
+    this.db = database;
+   appInstance.db = database;
+   app = appInstance;
+    if(err) throw err;
   });
 };
 
-
-
 EmployeeProvider.prototype.getCollection= function(callback) {
-  this.db.collection('employees', function(error, employee_collection) {
-    if( error ) callback(error);
+var my = this;
+console.log(app.db);
+  app.db.collection('employees', function(error, employee_collection) {
+    if( error ) {
+     console.log("Something happened. Could not getCollection");
+      console.log(error); 
+      callback(error);
+    }
     else callback(null, employee_collection);
   });
+  
 };
 
 //find all employees
@@ -38,7 +48,7 @@ EmployeeProvider.prototype.findAll = function(callback) {
       }
     });
 };
-/*
+
 //find an employee by ID
 EmployeeProvider.prototype.findById = function(id, callback) {
     this.getCollection(function(error, employee_collection) {
@@ -92,7 +102,11 @@ EmployeeProvider.prototype.update = function(employeeId, employees, callback) {
 //delete employee
 EmployeeProvider.prototype.delete = function(employeeId, callback) {
 	this.getCollection(function(error, employee_collection) {
-		if(error) callback(error);
+		if(error) {
+      console.log("Something happened. Could not delete");
+      console.log(error);
+      callback(error);
+    }
 		else {
 			employee_collection.remove(
 				{_id: employee_collection.db.bson_serializer.ObjectID.createFromHexString(employeeId)},
@@ -103,5 +117,5 @@ EmployeeProvider.prototype.delete = function(employeeId, callback) {
 			}
 	});
 };
-*/
+
 exports.EmployeeProvider = EmployeeProvider;
