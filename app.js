@@ -58,12 +58,9 @@ mongo.MongoClient.connect(MONGODB_URI, function(err, database) {
 //index
 
 app.get('/', function(req, res){
-     //db.collection('employees').find().toArray(function(err, emps) {
     res.render('index', {
       title: 'Employees',
-      //employees:emps
     });
-  //});
 });
 
 app.get('/profile', function(req, res){
