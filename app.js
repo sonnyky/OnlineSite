@@ -1,10 +1,12 @@
 /**
  * Module dependencies.
  */
-
  var express = require('express')
  , routes = require('./routes')
  , user = require('./routes/user')
+ , fs = require('fs')
+ , busboy = require('connect-busboy')
+ , multer = require('multer')
  , http = require('http')
  , path = require('path')
  , connect = require('connect')
@@ -13,6 +15,8 @@
  , methodOverride = require('method-override')
  , errorHandler = require('errorhandler')
  , favicon = require('serve-favicon')
+ , cloudinary = require('cloudinary')
+ , bodyParser = require('body-parser')
  , EmployeeProvider = require('./employeeprovider').EmployeeProvider;
 
  var app = express();
@@ -23,13 +27,32 @@ var MONGODB_URI =  "mongodb://sonny_yap:mongolabpa55@ds039421.mongolab.com:39421
 
 var employeeProvider= new EmployeeProvider(app);
 
+cloudinary.config({
+  cloud_name: 'dl8gnkdxm', 
+  api_key: '282265456376429', 
+  api_secret: 'JLiwWswdpeYHZ4aM5z56bXs-meE' 
+})
+
   app.set('views', __dirname + '/views');
   app.use('scripts', express.static(path.join(__dirname, '/scripts')));
   app.set('view engine', 'jade');
   app.set('view options', {layout: false});
   app.use(favicon(path.join(__dirname,'public','images','icon.ico')));
   app.use(logger('dev'));
-  app.use(bodyParser());
+  app.use(busboy());
+  app.use(multer({ dest: './uploads/',
+   rename: function (fieldname, filename) {
+      return filename+Date.now();
+    },
+  onFileUploadStart: function (file) {
+    console.log(file.originalname + ' is starting ...')
+  },
+  onFileUploadComplete: function (file) {
+    console.log(file.fieldname + ' uploaded to  ' + file.path)
+    done=true;
+  }
+  }));
+
   app.use(methodOverride());
   app.use(require('stylus').middleware(__dirname + '/public'));
   app.use(express.static(path.join(__dirname, 'public')));
@@ -101,6 +124,14 @@ app.post('/employee/:id/delete', function(req, res) {
 	employeeProvider.delete(req.param('_id'), function(error, docs) {
 		res.redirect('/')
 	});
+});
+
+//file upload
+
+app.post('/file-upload', function(req, res, next) {
+  console.dir(req.headers['content-type'])
+   console.log(req.body)
+   console.log(req.files)
 });
 
 app.listen(process.env.PORT || 3000);

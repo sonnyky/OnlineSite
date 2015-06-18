@@ -13,4 +13,11 @@ block content
                     input(type="text", name="name", id="editEmployeeName")
                 div#editEmployeeSubmit
                     input(type="submit", value="Save")
+                    
+        form(method="post", enctype="multipart/form-data", action="/file-upload")
+            div
+                    input(type="file", multiple="multiple", name="userPhoto",id="thumbnail", accept="image/*")
+                    input(type="submit", value="Send")
+                    
         a(href="/")!= "Back to Employee List"
+        
