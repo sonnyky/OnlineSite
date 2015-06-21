@@ -127,11 +127,32 @@ app.post('/employee/:id/delete', function(req, res) {
 });
 
 //file upload
-
+/*
 app.post('/file-upload', function(req, res, next) {
-  console.dir(req.headers['content-type'])
-   console.log(req.body)
-   console.log(req.files)
+  console.dir(req.headers['content-type']);
+   console.log(req.files);
+   
+   cloudinary.uploader.upload(
+      req.files.userPhoto.path,
+      function(result) { 
+        console.log(result);
+         res.redirect('/'); 
+        },
+      {
+        public_id: 'android_test_img', 
+        crop: 'limit',
+        width: 2000,
+        height: 2000,
+        eager: [
+          { width: 200, height: 200, crop: 'thumb', gravity: 'face',
+            radius: 20, effect: 'sepia' },
+          { width: 100, height: 150, crop: 'fit', format: 'png' }
+        ],                                     
+        tags: ['special', 'for_homepage']
+      }      
+    );
+   
 });
+*/
 
 app.listen(process.env.PORT || 3000);
