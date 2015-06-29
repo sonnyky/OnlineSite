@@ -3,7 +3,7 @@ extends layout
 block content
     h1= title
     div.newemployee
-        form( method="post")
+        form( method="post", enctype="multipart/form-data")
             div
                 div
                     span.label Title :
@@ -11,13 +11,17 @@ block content
                 div
                     span.label Name :
                     input(type="text", name="name", id="editEmployeeName")
+                div
+                    span.label Photo :
+                    input(type="text", name="imageId", id="employeePhoto")
+                div
+                    input(type="file", multiple="multiple", name="userPhoto",id="thumbnail", accept="image/*")
                 div#editEmployeeSubmit
                     input(type="submit", value="Save")
-                    
-        form(method="post", enctype="multipart/form-data", action="/file-upload")
-            div
-                    input(type="file", multiple="multiple", name="userPhoto",id="thumbnail", accept="image/*")
-                    input(type="submit", value="Send")
-                    
+
         a(href="/")!= "Back to Employee List"
-        
+block scripts
+    script.
+        $('#thumbnail').on('change', function(){
+            $('#employeePhoto').val($('#thumbnail').val().replace(/^.*\\/, "").split(".")[0]);
+        })	

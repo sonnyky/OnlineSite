@@ -5,10 +5,17 @@ var Connection = require('mongodb').Connection;
 var Server = require('mongodb').Server;
 var BSON = require('mongodb').BSON;
 var ObjectID = require('mongodb').ObjectID;
+var cloudinary_employee_provider = require('cloudinary');
 var mongouri = "mongodb://sonny_yap:mongolabpa55@ds039421.mongolab.com:39421/userdb"
 
 //placeholder for app instance
 var app;
+
+cloudinary_employee_provider.config({
+  cloud_name: 'dl8gnkdxm', 
+  api_key: '282265456376429', 
+  api_secret: 'JLiwWswdpeYHZ4aM5z56bXs-meE' 
+})
 
 //When instantiating provider class, pass the app instance as well
 //So we don't lose the app scope

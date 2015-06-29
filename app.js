@@ -16,7 +16,6 @@
  , errorHandler = require('errorhandler')
  , favicon = require('serve-favicon')
  , cloudinary = require('cloudinary')
- , bodyParser = require('body-parser')
  , EmployeeProvider = require('./employeeprovider').EmployeeProvider;
 
  var app = express();
@@ -39,6 +38,7 @@ cloudinary.config({
   app.set('view options', {layout: false});
   app.use(favicon(path.join(__dirname,'public','images','icon.ico')));
   app.use(logger('dev'));
+  app.use(bodyParser());
   app.use(busboy());
   app.use(multer({ dest: './uploads/',
    rename: function (fieldname, filename) {
@@ -64,10 +64,21 @@ cloudinary.config({
 
 app.get('/', function(req, res){
   this.db.collection('employees').find().toArray(function(err, emps) {
+   /*
     res.render('index', {
       title: 'My Profile Page',
-      employees:emps
+      employees:emps,
+      cloudinary_obj:cloudinary
     });
+    */
+    cloudinary.api.resources(function(items){
+    res.render('index', {
+        title: 'My Profile Page',
+        employees:emps,
+        cloudinary_obj:cloudinary
+      });
+    });
+    
   });
 });
 
@@ -88,9 +99,34 @@ app.get('/employee/new', function(req, res) {
 
 //save new employee
 app.post('/employee/new', function(req, res){
+  console.log(req.files);
+  //save the image to Cloudinary
+   cloudinary.uploader.upload(
+      req.files.userPhoto.path,
+      function(result) { 
+        console.log(result);
+
+        },
+      {
+        public_id: req.param('imageId'), 
+        crop: 'limit',
+        width: 2000,
+        height: 2000,
+        eager: [
+          { width: 200, height: 200, crop: 'thumb', gravity: 'face',
+            radius: 20, effect: 'sepia' },
+          { width: 100, height: 150, crop: 'fit', format: 'png' }
+        ],                                     
+        tags: ['special', 'for_homepage']
+      }      
+    );
+  
+  
+  
  employeeProvider.save({
     title: req.param('title'),
-    name: req.param('name')
+    name: req.param('name'),
+    img_id: req.param('imageId')
   }, function( error, docs) {
     res.redirect('/')
   });
@@ -126,33 +162,5 @@ app.post('/employee/:id/delete', function(req, res) {
 	});
 });
 
-//file upload
-/*
-app.post('/file-upload', function(req, res, next) {
-  console.dir(req.headers['content-type']);
-   console.log(req.files);
-   
-   cloudinary.uploader.upload(
-      req.files.userPhoto.path,
-      function(result) { 
-        console.log(result);
-         res.redirect('/'); 
-        },
-      {
-        public_id: 'android_test_img', 
-        crop: 'limit',
-        width: 2000,
-        height: 2000,
-        eager: [
-          { width: 200, height: 200, crop: 'thumb', gravity: 'face',
-            radius: 20, effect: 'sepia' },
-          { width: 100, height: 150, crop: 'fit', format: 'png' }
-        ],                                     
-        tags: ['special', 'for_homepage']
-      }      
-    );
-   
-});
-*/
 
 app.listen(process.env.PORT || 3000);
