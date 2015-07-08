@@ -8,15 +8,19 @@ h1{
 	margin-top: 25px;
   	margin-left: 5px;
   	color: #1b9ec9;
+	  font-size: 24px;
 }
 h2{
 	margin-top:5px; 
 	margin-left:5px;
+	font-size: 16px;
 }
 
 #lang_sel{
-	width: 200px;
+	width: 150px;
+	height: 30px;
 	margin-top: 15px;
+	font-size: 16px;
 }
 
 #contacts{
