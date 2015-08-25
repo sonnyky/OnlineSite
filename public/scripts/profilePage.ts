@@ -1,37 +1,48 @@
 /// <reference path="./thirdparty/jquery.d.ts" />
 /// <reference path="./util/touchClass.ts" />
+/// <reference path="./util/tsUnit.ts" />
+/// <reference path="./util/languageTest.ts" />
 
-module page{
+module profilePage{
 
-	export class profilePage{
+	export class profilePageClass{
 		constructor(){
 			var $=jQuery;
+			var sel:string;
+
 			$('select').on('change', ()=>{
-				this.changeLanguage();
+				sel = $('#lang_sel').val();
+				this.changeLanguage(sel);
 			});
 		}
 		
-		changeLanguage(){
+		changeLanguage(sel:string):string{
 			var $ = jQuery;
 			var sel:string;
-			sel = $('#lang_sel').val();
+			var mode_string:string;
+
 			switch(sel){
 				case 'english':
 				this.showEnglish();
+				mode_string = 'english';
 				break;
 				case 'japanese':
+				mode_string = 'japanese'
 				this.showJapanese();
 				break;
 				case 'chinese':
+				mode_string = 'chinese'
 				this.showChinese();
 				break;
 				case 'indonesian':
+				mode_string = 'indonesian'
 				this.showIndonesian();
 				break;
 				default:
 				this.showEnglish();
 				break;
 			}
+			return mode_string;
 		}
 		
 		showJapanese(){

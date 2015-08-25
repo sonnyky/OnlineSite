@@ -1,63 +1,72 @@
 /// <reference path="./thirdparty/jquery.d.ts" />
 /// <reference path="./util/touchClass.ts" />
-var page;
-(function (page) {
-    var profilePage = (function () {
-        function profilePage() {
+/// <reference path="./util/tsUnit.ts" />
+/// <reference path="./util/languageTest.ts" />
+var profilePage;
+(function (profilePage) {
+    var profilePageClass = (function () {
+        function profilePageClass() {
             var _this = this;
             var $ = jQuery;
+            var sel;
             $('select').on('change', function () {
-                _this.changeLanguage();
+                sel = $('#lang_sel').val();
+                _this.changeLanguage(sel);
             });
         }
-        profilePage.prototype.changeLanguage = function () {
+        profilePageClass.prototype.changeLanguage = function (sel) {
             var $ = jQuery;
             var sel;
-            sel = $('#lang_sel').val();
+            var mode_string;
             switch (sel) {
                 case 'english':
                     this.showEnglish();
+                    mode_string = 'english';
                     break;
                 case 'japanese':
+                    mode_string = 'japanese';
                     this.showJapanese();
                     break;
                 case 'chinese':
+                    mode_string = 'chinese';
                     this.showChinese();
                     break;
                 case 'indonesian':
+                    mode_string = 'indonesian';
                     this.showIndonesian();
                     break;
                 default:
                     this.showEnglish();
                     break;
             }
+            return mode_string;
         };
-        profilePage.prototype.showJapanese = function () {
+        profilePageClass.prototype.showJapanese = function () {
             $('#english_wrapper').hide();
             $('#japanese_wrapper').show();
             $('#indonesian_wrapper').hide();
             $('#mandarin_wrapper').hide();
         };
-        profilePage.prototype.showEnglish = function () {
+        profilePageClass.prototype.showEnglish = function () {
             $('#english_wrapper').show();
             $('#japanese_wrapper').hide();
             $('#indonesian_wrapper').hide();
             $('#mandarin_wrapper').hide();
         };
-        profilePage.prototype.showChinese = function () {
+        profilePageClass.prototype.showChinese = function () {
             $('#indonesian_wrapper').hide();
             $('#japanese_wrapper').hide();
             $('#english_wrapper').hide();
             $('#mandarin_wrapper').show();
         };
-        profilePage.prototype.showIndonesian = function () {
+        profilePageClass.prototype.showIndonesian = function () {
             $('#indonesian_wrapper').show();
             $('#japanese_wrapper').hide();
             $('#english_wrapper').hide();
             $('#mandarin_wrapper').hide();
         };
-        return profilePage;
+        return profilePageClass;
     })();
-    page.profilePage = profilePage;
-})(page || (page = {}));
+    profilePage.profilePageClass = profilePageClass;
+})(profilePage || (profilePage = {}));
 //# sourceMappingURL=profilePage.js.map
