@@ -1,7 +1,7 @@
 /// <reference path="./thirdparty/jquery.d.ts" />
 /// <reference path="./util/touchClass.ts" />
-/// <reference path="./util/tsUnit.ts" />
-/// <reference path="./util/languageTest.ts" />
+// <reference path="./util/tsUnit.ts" />
+// <reference path="./util/languageTest.ts" />
 
 module profilePage{
 

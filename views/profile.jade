@@ -10,19 +10,28 @@ block content
 		p#nameText Sonny Kurniawan
 	#photo
 		img(src="images/profile.jpg")
-	#language_selector
+	#language_selector(style="margin-top:50px; margin-left:30px")
 		select(id="lang_sel")
 			option(value="english") English
 			option(value="japanese") Japanese
 			option(value="chinese") Chinese
 			option(value="indonesian") Indonesian
+
+	//.btn-group(id="lang_select_btn_group")
+		button(type="button", class="btn btn-primary")
+			|English
+		button(type="button", id="lang_select", class="btn btn-primary dropdown-toggle", data-toggle="dropdown", aria-haspopup="true", aria-expanded="false")
+			span(class="caret")
+		ul(class="dropdown-menu")
+			li
+				|Japanese
 	#contacts
 		p
-			img(src="../images/mail.png" onMouseOver="this.src='../images/mail_hover.png'" onmouseout="this.src='../images/mail.png'" style="vertical-align:text-middle")
+			span(class="glyphicon glyphicon-envelope", style="margin-right:10px")
 			| blitzkrieg.burner@gmail.com
 
 			br
-			img(src="../images/phone.png" onMouseOver="this.src='../images/phone_hover.png'" onmouseout="this.src='../images/phone.png'" style="vertical-align:text-middle") 
+			span(class="glyphicon glyphicon-phone", style="margin-right:10px")
 			| 090-1958-6549
 
 	#english_wrapper
@@ -230,11 +239,11 @@ block content
 
 block scripts
 	script(src="/scripts/profilePage.js")
-	script(src="/scripts/util/languageTest.js")
+	//script(src="/scripts/util/languageTest.js")
 	script.
 		$(document).ready(function(){
-			var test = new tsUnit.Test(languageTests);
-			test.showResults(document.getElementById('contacts'), test.run());
+			//var test = new tsUnit.Test(languageTests);
+			//test.showResults(document.getElementById('contacts'), test.run());
 
 			new profilePage.profilePageClass();
 		})	
