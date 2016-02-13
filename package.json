@@ -1,22 +1,37 @@
 {
-  "name": "hello-world",
+  "name": "online-resume",
   "description": "hello world test app",
   "version": "0.0.1",
   "private": true,
-  "engines":{
-    "node":"0.10.26",
-    "npm":"1.4.3"
+  "engines": {
+    "node": "0.10.26",
+    "npm": "1.4.3"
   },
   "dependencies": {
     "express": "4.8.2",
     "jade": "*",
     "stylus": "*",
     "mongodb": "*",
-    "body-parser":"*",
+    "body-parser": "*",
     "connect": "1.8.5",
-    "method-override":"*",
-    "serve-favicon":"*",
-    "morgan":"*",
-    "errorhandler":"*"
-  }
+    "method-override": "*",
+    "serve-favicon": "*",
+    "morgan": "*",
+    "errorhandler": "*"
+  },
+  "main": "app.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sonnyky/OnlineSite.git"
+  },
+  "author": "Sonny Kurniawan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sonnyky/OnlineSite/issues"
+  },
+  "homepage": "https://github.com/sonnyky/OnlineSite#readme"
 }

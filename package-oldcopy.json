@@ -1,0 +1,22 @@
+{
+  "name": "hello-world",
+  "description": "hello world test app",
+  "version": "0.0.1",
+  "private": true,
+  "engines":{
+    "node":"0.10.26",
+    "npm":"1.4.3"
+  },
+  "dependencies": {
+    "express": "4.8.2",
+    "jade": "*",
+    "stylus": "*",
+    "mongodb": "*",
+    "body-parser":"*",
+    "connect": "1.8.5",
+    "method-override":"*",
+    "serve-favicon":"*",
+    "morgan":"*",
+    "errorhandler":"*"
+  }
+}
