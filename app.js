@@ -51,7 +51,7 @@ cloudinary.config({
     console.log(file.fieldname + ' uploaded to  ' + file.path)
     done=true;
   }
-  }));
+  }).single('singleInputFileName'));
 
   app.use(methodOverride());
   app.use(require('stylus').middleware(__dirname + '/public'));
