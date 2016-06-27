@@ -5,7 +5,6 @@ div#radarGraph {
 }
 
 h1{
-	margin-top: 25px;
   	margin-left: 5px;
   	color: #1b9ec9;
 	  font-size: 24px;
@@ -26,7 +25,7 @@ h2{
 #contacts{
 	margin-top: 25px;
 	margin-left: 30px;
-	color:#FFFFFF;
+	color:#121212;
 	font-size:0.7em;
 }
 .clearfix:after {
@@ -55,7 +54,7 @@ h2{
 
 /*The DIV that shows full name on top of page*/
 div#introDiv{
-	height:30%; color:#FFFFFF; margin-bottom:10px;
+	height:30%; color:#FFFFFF; margin:10px; background-color: white
 }
 
 /*The p tag that shows full name on top of page*/
@@ -71,16 +70,12 @@ div#photo{
 	margin-right: 5px;
 }
 div#photo img{
-	width: 100%;
+	width: 70%;
 }
 
+
 /*The div class that acts as resume entry wrapper*/
-div.entry{
-	width:100%;
-	position:relative; 
-	margin-top:1%; 
-	color:#FFFFFF
-}
+
 div.entryTitle{
 	font-size:0.5em;
 	background-color:#383838; 
@@ -93,16 +88,29 @@ div.entryContent{
 body
 {
 	background-color:#ECEFF1;
-	margin-top:0px;
-	margin-bottom:0px;
-	
+	max-width: 75%;
+	margin:auto;
 	font-family:Aller;
 	font-size:20px;
 }
 
 /****************************************************************************For layout on tablets in portrait mode******************************************************************/
-@media screen and (max-width: 800px)
+@media screen and (max-width: 800px) and (min-width: 380px)
 {
+	.flexbox-container {
+	display: -ms-flex;
+	display: -webkit-flex;
+	display: flex;
+	}
+
+	.flexbox-container > div {
+		width: 50%;
+		padding: 10px;
+	}
+	
+	.flexbox-container > div:first-child {
+		margin-right: 20px;
+	}
 	div.entryTitle{
 		width:100%;font-size:0.45em;
 	}
@@ -130,8 +138,22 @@ body
 
 /* Desktops and laptops ----------- */
 @media only screen 
-and (min-width : 1224px) {
+and (min-width : 1024px) {
 	/* Styles */
+	.flexbox-container {
+	display: -ms-flex;
+	display: -webkit-flex;
+	display: flex;
+	}
+	
+	.flexbox-container > div {
+		width: 50%;
+		padding: 10px;
+	}
+	
+	.flexbox-container > div:first-child {
+		margin-right: 20px;
+	}
 	div#photo{
 		width:20%;
 	}

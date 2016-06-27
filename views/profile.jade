@@ -5,34 +5,38 @@ block append head
 	link(rel='stylesheet', href='/stylesheets/common.css')
 	link(rel='stylesheet', href='/stylesheets/smartphones-portrait.css')
 	
-block content	
-	#introDiv
-		p#nameText Sonny Kurniawan
-	#photo
-		img(src="images/profile.jpg")
-	#language_selector(style="margin-top:50px; margin-left:30px")
-		select(id="lang_sel")
-			option(value="english") English
-			option(value="japanese") Japanese
-			option(value="chinese") Chinese
-			option(value="indonesian") Indonesian
+block content
+	.flexbox-container
+		#photo
+			img(src="images/profile.jpg")
+		#introDiv
+			p#nameText Sonny Kurniawan
+	
+	.flexbox-container
+		#personal_contacts
+			#language_selector
+				select(id="lang_sel")
+					option(value="english") English
+					option(value="japanese") Japanese
+					option(value="chinese") Chinese
+					option(value="indonesian") Indonesian
+			#contacts
+				p
+					span(class="glyphicon glyphicon-envelope", style="margin-right:10px")
+					| blitzkrieg.burner@gmail.com
+		
+					br
+					span(class="glyphicon glyphicon-phone", style="margin-right:10px")
+					| 090-1958-6549
+		#firstEntry.entry
+			#aboutMe.entryTitle
+				h1 About Me
+			#summary.entryContent
+				h2 I am a software engineer working in Japan interested in all things related to software and programming.
+					|I did a major in Robotics focusing on biped humanoid robots and some computer vision.
+					|I enjoy coding and is always looking to upgrade my current skills and learn new ones.
+					|When not in front of my computer I enjoy tennis, travelling, and also reading a good book.
 
-	//.btn-group(id="lang_select_btn_group")
-		button(type="button", class="btn btn-primary")
-			|English
-		button(type="button", id="lang_select", class="btn btn-primary dropdown-toggle", data-toggle="dropdown", aria-haspopup="true", aria-expanded="false")
-			span(class="caret")
-		ul(class="dropdown-menu")
-			li
-				|Japanese
-	#contacts
-		p
-			span(class="glyphicon glyphicon-envelope", style="margin-right:10px")
-			| blitzkrieg.burner@gmail.com
-
-			br
-			span(class="glyphicon glyphicon-phone", style="margin-right:10px")
-			| 090-1958-6549
 
 	#english_wrapper
 		#firstEntry.entry
