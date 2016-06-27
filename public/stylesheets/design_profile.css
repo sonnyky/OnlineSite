@@ -7,7 +7,7 @@ div#radarGraph {
 h1{
   	margin-left: 5px;
   	color: #1b9ec9;
-	  font-size: 24px;
+	  font-size: 1em;
 }
 h2{
 	margin-top:5px; 
@@ -18,13 +18,14 @@ h2{
 #lang_sel{
 	width: 150px;
 	height: 30px;
-	margin-top: 15px;
+	margin-top: 3%;
+	margin-left: 5%;
 	font-size: 16px;
 }
 
 #contacts{
-	margin-top: 25px;
-	margin-left: 30px;
+	margin-top: 5%;
+	margin-left: 5%;
 	color:#121212;
 	font-size:0.7em;
 }
@@ -64,13 +65,20 @@ div.entry{
 	width:100%;
 	color:#121212;
 	margin:10px;
-	background-color: white
+	padding: 5%;
+	background-color: white;
+	-webkit-box-shadow: 0 8px 6px -6px black;
+	   -moz-box-shadow: 0 8px 6px -6px black;
+	    box-shadow: 0 8px 6px -6px black;
 }
 #personal_contacts{
 	width:100%;
 	color:#121212;
 	margin:10px;
-	background-color: white
+	background-color: white;
+	-webkit-box-shadow: 0 8px 6px -6px black;
+	   -moz-box-shadow: 0 8px 6px -6px black;
+	    box-shadow: 0 8px 6px -6px black;
 }
 
 /*The p tag that shows full name on top of page*/
@@ -93,9 +101,10 @@ div#photo img{
 /*The div class that acts as resume entry wrapper*/
 
 div.entryTitle{
-	font-size:0.5em;
+	font-size:1em;
 	background-color:#383838; 
 	margin-right:1%;
+	height: 1.5em
 }
 div.entryContent{
 	font-size:0.6em; width:75%;
@@ -128,7 +137,7 @@ body
 		margin-right: 20px;
 	}
 	div.entryTitle{
-		width:100%;font-size:0.45em;
+		width:100%;font-size:1em;
 	}
 	div.entryContent{
 		font-size:0.5em; width:100%;
@@ -192,7 +201,7 @@ and (min-width : 1024px) {
 		width:100%;
 	}
 	div.entryTitle{
-		width:100%;font-size:0.5em;
+		width:100%;font-size:1em;
 	}
 	div.entryContent{
 		font-size:0.6em; width:100%;
