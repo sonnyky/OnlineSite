@@ -10,16 +10,16 @@ var util;
         touchClass.prototype.doBindings = function () {
             var _this = this;
             var $ = jQuery;
-            $(this.target).on("touchstart", function (e) {
+            $(this.target).on("touchstart mousedown", function (e) {
                 e.preventDefault();
             });
-            $(this.target).on("touchend", function (e) {
+            $(this.target).on("touchend mouseup", function (e) {
                 e.preventDefault();
                 _this.callback_end();
             });
         };
         return touchClass;
-    })();
+    }());
     util.touchClass = touchClass;
 })(util || (util = {}));
 //# sourceMappingURL=touchClass.js.map

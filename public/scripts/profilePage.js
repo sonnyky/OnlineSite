@@ -9,7 +9,6 @@ var profilePage;
             var _this = this;
             var $ = jQuery;
             var sel;
-
             $('select').on('change', function () {
                 sel = $('#lang_sel').val();
                 _this.changeLanguage(sel);
@@ -19,7 +18,6 @@ var profilePage;
             var $ = jQuery;
             var sel;
             var mode_string;
-
             switch (sel) {
                 case 'english':
                     this.showEnglish();
@@ -43,36 +41,56 @@ var profilePage;
             }
             return mode_string;
         };
-
         profilePageClass.prototype.showJapanese = function () {
-            $('#english_wrapper').hide();
-            $('#japanese_wrapper').show();
-            $('#indonesian_wrapper').hide();
-            $('#mandarin_wrapper').hide();
+            $('#aboutMe').html($('#aboutMeJapanese').html());
+            $('#summary').html($('#summaryJapanese').html());
+            $('#education').html($('#educationJapanese').html());
+            $('#eduSummary').html($('#eduSummaryJapanese').html());
+            $('#workExperience').html($('#workExperienceJapanese').html());
+            $('#expSummary').html($('#expSummaryJapanese').html());
+            $('#language').html($('#languageJapanese').html());
+            $('#langSummary').html($('#langSummaryJapanese').html());
+            $('#skills').html($('#skillsJapanese').html());
+            $('#skillsSummary').html($('#skillsSummaryJapanese').html());
         };
-
         profilePageClass.prototype.showEnglish = function () {
-            $('#english_wrapper').show();
-            $('#japanese_wrapper').hide();
-            $('#indonesian_wrapper').hide();
-            $('#mandarin_wrapper').hide();
+            $('#aboutMe').html($('#aboutMeEnglish').html());
+            $('#summary').html($('#summaryEnglish').html());
+            $('#education').html($('#educationEnglish').html());
+            $('#eduSummary').html($('#eduSummaryEnglish').html());
+            $('#workExperience').html($('#workExperienceEnglish').html());
+            $('#expSummary').html($('#expSummaryEnglish').html());
+            $('#language').html($('#languageEnglish').html());
+            $('#langSummary').html($('#langSummaryEnglish').html());
+            $('#skills').html($('#skillsEnglish').html());
+            $('#skillsSummary').html($('#skillsSummaryEnglish').html());
         };
-
         profilePageClass.prototype.showChinese = function () {
-            $('#indonesian_wrapper').hide();
-            $('#japanese_wrapper').hide();
-            $('#english_wrapper').hide();
-            $('#mandarin_wrapper').show();
+            $('#aboutMe').html($('#aboutMeMandarin').html());
+            $('#summary').html($('#summaryMandarin').html());
+            $('#education').html($('#educationMandarin').html());
+            $('#eduSummary').html($('#eduSummaryMandarin').html());
+            $('#workExperience').html($('#workExperienceMandarin').html());
+            $('#expSummary').html($('#expSummaryMandarin').html());
+            $('#language').html($('#languageMandarin').html());
+            $('#langSummary').html($('#langSummaryMandarin').html());
+            $('#skills').html($('#skillsMandarin').html());
+            $('#skillsSummary').html($('#skillsSummaryMandarin').html());
         };
-
         profilePageClass.prototype.showIndonesian = function () {
-            $('#indonesian_wrapper').show();
-            $('#japanese_wrapper').hide();
-            $('#english_wrapper').hide();
-            $('#mandarin_wrapper').hide();
+            $('#aboutMe').html($('#aboutMeIndonesian').html());
+            $('#summary').html($('#summaryIndonesian').html());
+            $('#education').html($('#educationIndonesian').html());
+            $('#eduSummary').html($('#eduSummaryIndonesian').html());
+            $('#workExperience').html($('#workExperienceIndonesian').html());
+            $('#expSummary').html($('#expSummaryIndonesian').html());
+            $('#language').html($('#languageIndonesian').html());
+            $('#langSummary').html($('#langSummaryIndonesian').html());
+            $('#skills').html($('#skillsIndonesian').html());
+            $('#skillsSummary').html($('#skillsSummaryIndonesian').html());
         };
         return profilePageClass;
-    })();
+    }());
     profilePage.profilePageClass = profilePageClass;
 })(profilePage || (profilePage = {}));
 //# sourceMappingURL=profilePage.js.map

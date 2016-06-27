@@ -9,8 +9,8 @@
 	}
 	div#photo{
 		position: absolute;
-		top: 40px;
-		left: 40px;
+		top: 10%;
+		left: 20%;
 		font-size:0.6em;
 		width: 30%;
 	}
