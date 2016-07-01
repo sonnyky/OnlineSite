@@ -14,3 +14,12 @@ select{
     background: #FFF url(../images/select_arrow.png) no-repeat;
     background-position: right 3px center; 
 }
+
+body
+{
+	background-color:#ECEFF1;
+	max-width: 75%;
+	margin:auto;
+	font-family:Aller;
+	font-size:20px;
+}

@@ -88,6 +88,11 @@ app.get('/profile', function(req, res){
     });
 });
 
+app.get('/howto_graphit', function(req, res){
+    res.render('howto_graphit', { 
+      title: 'How To Use Graph It' 
+    });
+});
 
 
 //new employee

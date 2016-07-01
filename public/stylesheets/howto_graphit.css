@@ -1,0 +1,35 @@
+/**********For layout on smartphones in portrait mode************/
+@media screen and (max-width: 480px)
+{
+	h1{
+		font-size: 1em
+	}
+	.title_area{
+		background-color: #121212;
+		color: white;
+		height: 110%;
+		text-align: center
+	}
+	.manual_area{
+		font-size: 0.75em
+	}
+	img{
+		width: 100%;
+		margin-top: 10px
+	}
+}
+
+
+
+/***********For layout on tablets in portrait mode******/
+@media screen and (max-width: 800px) and (min-width: 480px)
+{
+
+}
+
+/* Desktops and laptops ----------- */
+@media only screen 
+and (min-width : 1024px) {
+
+}
+
