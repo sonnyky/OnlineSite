@@ -94,6 +94,12 @@ app.get('/howto_graphit', function(req, res){
     });
 });
 
+app.get('/app_privacy_policy', function(req, res){
+    res.render('app_privacy_policy', { 
+      title: 'Privacy Policy' 
+    });
+});
+
 
 //new employee
 app.get('/employee/new', function(req, res) {
