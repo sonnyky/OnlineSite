@@ -5,4 +5,56 @@ block append head
 
 block content
 	#profile_photo
-		img(src="images/Bjarne.jpg" style="width:90%; margin-top:10%; margin-left:5%; bottom:50px")
+		div.photo_img
+			img(src="images/Bjarne.jpg" style="width:80%; display:block; margin-left:5%;")
+		div.overview Test
+	#profile_summary.container
+		| Summary of Bjarne Stroustrup's accomplishments.
+		div.accomplishments
+			div.accomplishment_item
+				div.accomplishment_inner
+					div.accomplishment_head.clearfix
+						div.detail
+							h5.handle  Fellow of the Computer History Museum
+							div.post_meta
+								div.details_meta
+									span.when
+										span.when_data 2015
+					div.contents For his invention of the C++ programming language
+		div.accomplishments
+			div.accomplishment_item
+				div.accomplishment_inner
+					div.accomplishment_head.clearfix
+						div.detail
+							h5.handle   The Dahl-Nygaard senior prize 
+							div.post_meta
+								div.details_meta
+									span.when
+										span.when_data 2015
+					div.contents For the design, implementation, and evolution of the C++ programming language.
+		div.accomplishments
+			div.accomplishment_item
+				div.accomplishment_inner
+					div.accomplishment_head.clearfix
+						div.detail
+							h5.handle  Electronic Design Hall of Fame
+							div.post_meta
+								div.details_meta
+									span.when
+										span.when_data 2013
+					div.contents At the end of each year, the editors of Electronic Design nominate new candidates for their Engineering Hall of Fame, and then select a group of new inductees based on level of contribution, industry impact, lasting achievement and feedback from readers.
+		div.accomplishments
+			div.accomplishment_item
+				div.accomplishment_inner
+					div.accomplishment_head.clearfix
+						div.detail
+							h5.handle   Honorary Doctor of Computer Science from The National Research University, ITMO, St. Petersburg, Russia.
+							div.post_meta
+								div.details_meta
+									span.when
+										span.when_data 2013
+					div.contents The St. Petersburg in Russia 
+	div.epilogue
+		p
+			i.fa.fa-info.fa-fw.fa-border
+			| The contents are taken from Bjarne Stroustrup's personal homepage. This tribute page is part of a project for freecodecamp.

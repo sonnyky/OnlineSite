@@ -1,16 +1,6 @@
 @font-face {
-font-family: Weston;
-src: url("../fonts/weston/WestonLightFree.otf");
-}
-
-@font-face {
-font-family: RalewayThin;
-src: url("../fonts/raleway/RalewayThin.otf");
-}
-
-@font-face {
-font-family: Five;
-src: url("../fonts/5ive/FiveMinutes.otf");
+font-family: Monaco;
+src: url("../fonts/Monaco.ttf");
 }
 
 
