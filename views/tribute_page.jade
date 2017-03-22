@@ -1,0 +1,95 @@
+extends layout
+
+block append head
+	link(rel='stylesheet', href='/stylesheets/tribute_page.css')
+
+block content
+	#profile_photo
+		div.photo_img
+			img(src="images/Bjarne.jpg" style="width:80%; display:block; margin-left:5%;")
+		div.overview Bjarne Stroustrup <br> Inventor of C++
+	#profile_summary.container
+		| Summary of Bjarne Stroustrup's accomplishments.
+		div.accomplishments
+			div.accomplishment_item
+				div.accomplishment_inner
+					div.accomplishment_head.clearfix
+						div.detail
+							h5.handle  Fellow of the Computer History Museum
+							div.post_meta
+								div.details_meta
+									span.when
+										span.when_data 2015
+					div.contents For his invention of the C++ programming language
+		div.accomplishments
+			div.accomplishment_item
+				div.accomplishment_inner
+					div.accomplishment_head.clearfix
+						div.detail
+							h5.handle   The Dahl-Nygaard senior prize 
+							div.post_meta
+								div.details_meta
+									span.when
+										span.when_data 2015
+					div.contents For the design, implementation, and evolution of the C++ programming language.
+		div.accomplishments
+			div.accomplishment_item
+				div.accomplishment_inner
+					div.accomplishment_head.clearfix
+						div.detail
+							h5.handle  Electronic Design Hall of Fame
+							div.post_meta
+								div.details_meta
+									span.when
+										span.when_data 2013
+					div.contents At the end of each year, the editors of Electronic Design nominate new candidates for their Engineering Hall of Fame, and then select a group of new inductees based on level of contribution, industry impact, lasting achievement and feedback from readers.
+		div.accomplishments
+			div.accomplishment_item
+				div.accomplishment_inner
+					div.accomplishment_head.clearfix
+						div.detail
+							h5.handle   Honorary Doctor of Computer Science from The National Research University, ITMO, St. Petersburg, Russia.
+							div.post_meta
+								div.details_meta
+									span.when
+										span.when_data 2013
+					div.contents ITMO is a large state university in Saint Petersburg and is one of Russia’s National Research Universities. ITMO University is one of 15 Russian universities that were selected to participate in Russian Academic Excellence Project 5-100 by the government of the Russian Federation to improve their international competitiveness among the world’s leading research and educational centers.
+		div.accomplishments
+			div.accomplishment_item
+				div.accomplishment_inner
+					div.accomplishment_head.clearfix
+						div.detail
+							h5.handle  The Golden Abacus Award
+							div.post_meta
+								div.details_meta
+									span.when
+										span.when_data 2013
+					div.contents Upsilon Pi Epsilon is an honorary society whose membership consists of outstanding undergraduate and graduate students in Computing and Information Disciplines. Only schools that offer a degree in a computing science-related discipline may be chartered. Upsilon Pi Epsilon’s most prestigious award is the ABACUS Award, presented to an individual who has gained international renown in the profession, and over a period of several years has provided extensive support and leadership for student-related activities in the computing and information disciplines. 
+		div.accomplishments
+			div.accomplishment_item
+				div.accomplishment_inner
+					div.accomplishment_head.clearfix
+						div.detail
+							h5.handle  The University of Aarhus's Rigmor og Carl Holst-Knudsens Videnskapspris.
+							div.post_meta
+								div.details_meta
+									span.when
+										span.when_data 2010
+					div.contents The university's oldest and most prestigious honor for contributions to science by a person associated with the university.
+		div.accomplishments
+			div.accomplishment_item
+				div.accomplishment_inner
+					div.accomplishment_head.clearfix
+						div.detail
+							h5.handle  Dr. Dobb's Excellence in Programming award.
+							div.post_meta
+								div.details_meta
+									span.when
+										span.when_data 2008
+					div.contents Dr. Dobb's Excellence in Programming Award is annually bestowed on individuals who, in the spirit of innovation and cooperation, have made significant contributions to the advancement of software development.
+	div.epilogue
+		p
+			i.fa.fa-info.fa-fw
+			| The contents are taken from 
+			a(href="http://www.stroustrup.com/bio.html") Bjarne Stroustrup's personal homepage. 
+			| Please refer to the site for more information.

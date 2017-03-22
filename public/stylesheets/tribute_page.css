@@ -1,0 +1,185 @@
+body{
+	background-image: url("../images/tribute-background-blurred.JPG");
+	background-size: contain;
+}
+#profile_photo{
+	background-color: black;
+	margin-bottom: 10%;
+	position: relative;
+}
+
+@media only screen
+and (max-device-width : 440px){
+	.overview{
+		position: absolute;
+		background-color: white;
+		right: 5%;
+		top: 60%;
+		font-family: Monaco;
+		padding: 5px;
+		font-size: 1em;
+		border-radius: 10px;
+	}
+	#profile_summary, .epilogue{
+		border-radius: 5px;
+		width: 90%;
+		margin-left:auto;
+		margin-right:auto;
+		margin-bottom: 10%;
+		padding: 3%;
+		background-color: white;
+		font-family: Monaco;
+		font-size: 1em;
+	}
+		
+}
+
+@media only screen
+and (min-width : 700px)
+and (max-width : 1980px){
+	.overview{
+		position: absolute;
+		background-color: white;
+		right: 5%;
+		top: 50%;
+		font-family: Monaco;
+		padding: 15px;
+		font-size: 2em;
+		border-radius: 10px;
+	}
+
+	#profile_summary, .epilogue{
+		border-radius: 5px;
+		width: 90%;
+		margin-left:auto;
+		margin-right:auto;
+		margin-bottom: 10%;
+		padding: 3%;
+		background-color: white;
+		font-family: Monaco;
+		font-size: 1.5em;
+	}
+}
+
+
+
+
+
+.accomplishments{
+	margin-top: 5%;
+}
+
+.accomplishment_item {
+margin-bottom: 25px;
+margin-left: 40px;
+position: relative;
+}
+.accomplishment_item .accomplishment_inner {
+background: #fff;
+border: 1px solid #ddd;
+border-radius: 3px;
+padding: 10px;
+position: relative;
+}
+.accomplishment_item .accomplishment_inner:before {
+border-right: 10px solid #ddd;
+border-style: solid;
+border-width: 10px;
+color: rgba(0,0,0,0);
+content: "";
+display: block;
+height: 0;
+position: absolute;
+left: -20px;
+top: 6px;
+width: 0;
+}
+.accomplishment_item .accomplishment_inner:after {
+border-right: 10px solid #fff;
+border-style: solid;
+border-width: 10px;
+color: rgba(0,0,0,0);
+content: "";
+display: block;
+height: 0;
+position: absolute;
+left: -18px;
+top: 6px;
+width: 0;
+}
+.accomplishment_item:before {
+background: #fff;
+border-radius: 2px;
+bottom: -30px;
+box-shadow: 0 0 3px rgba(0,0,0,0.2);
+content: "";
+height: 100%;
+left: -30px;
+position: absolute;
+width: 3px;
+}
+.accomplishment_item:after {
+background: #fff;
+border: 2px solid #ccc;
+border-radius: 50%;
+box-shadow: 0 0 5px rgba(0,0,0,0.1);
+content: "";
+height: 15px;
+left: -36px;
+position: absolute;
+top: 10px;
+width: 15px;
+}
+.clearfix:before, .clearfix:after {
+content: " ";
+display: table;
+}
+.accomplishment_item .accomplishment_head {
+border-bottom: 1px solid #eee;
+margin-bottom: 8px;
+padding-bottom: 8px;
+}
+.accomplishment_item .accomplishment_head .icon_img {
+margin-right: 20px;
+}
+.accomplishment_item .accomplishment_head .detail {
+overflow: hidden;
+}
+.accomplishment_item .accomplishment_head .detail h5 {
+font-size: 1em;
+font-weight: bold;
+line-height: 1.5;
+margin: 0;
+}
+.accomplishment_item .accomplishment_head .post_meta {
+float: left;
+padding: 0 15px 0 0;
+}
+.accomplishment_item .accomplishment_head .post_meta >div {
+color: #333;
+font-weight: bold;
+text-align: right;
+}
+.post_meta > div {
+color: #777;
+font-size: 12px;
+line-height: 25px;
+}
+.accomplishment_item .accomplishment_head .post_meta >div {
+color: #333;
+font-weight: bold;
+text-align: right;
+}
+.post_meta > div {
+color: #777;
+font-size: 1em;
+line-height: 25px;
+}
+icon_img {
+ min-height: 40px;
+ max-height: 40px;
+}
+
+.inline_icon{
+	padding: 3px;
+}
