@@ -1,5 +1,5 @@
 body{
-	background-image: url("../images/tribute-background.JPG");
+	background-image: url("../images/tribute-background-blurred.JPG");
 	background-size: contain;
 }
 #profile_photo{
@@ -8,24 +8,62 @@ body{
 	position: relative;
 }
 
-.overview{
-	position: absolute;
-	background-color: white;
-	right: 5%;
-	top: 5%;
+@media only screen
+and (max-device-width : 440px){
+	.overview{
+		position: absolute;
+		background-color: white;
+		right: 5%;
+		top: 60%;
+		font-family: Monaco;
+		padding: 5px;
+		font-size: 1em;
+		border-radius: 10px;
+	}
+	#profile_summary, .epilogue{
+		border-radius: 5px;
+		width: 90%;
+		margin-left:auto;
+		margin-right:auto;
+		margin-bottom: 10%;
+		padding: 3%;
+		background-color: white;
+		font-family: Monaco;
+		font-size: 1em;
+	}
+		
+}
+
+@media only screen
+and (min-width : 700px)
+and (max-width : 1980px){
+	.overview{
+		position: absolute;
+		background-color: white;
+		right: 5%;
+		top: 50%;
+		font-family: Monaco;
+		padding: 15px;
+		font-size: 2em;
+		border-radius: 10px;
+	}
+
+	#profile_summary, .epilogue{
+		border-radius: 5px;
+		width: 90%;
+		margin-left:auto;
+		margin-right:auto;
+		margin-bottom: 10%;
+		padding: 3%;
+		background-color: white;
+		font-family: Monaco;
+		font-size: 1.5em;
+	}
 }
 
 
-#profile_summary, .epilogue{
-	border-radius: 5px;
-	width: 90%;
-	margin-left:auto;
-	margin-right:auto;
-	padding: 3%;
-	background-color: white;
-	font-family: Monaco;
-	font-size: 1em;
-}
+
+
 
 .accomplishments{
 	margin-top: 5%;
