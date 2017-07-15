@@ -40,7 +40,8 @@ cloudinary.config({
   app.use(logger('dev'));
   app.use(bodyParser());
   app.use(busboy());
-  app.use('/tribute_page', require('./routes/tribute_page'))
+  app.use('/tribute_page', require('./routes/tribute_page'));
+  app.use('/kimmy_resume', require('./routes/kimmy_resume'));
   app.use(multer({ dest: './uploads/',
    rename: function (fieldname, filename) {
       return filename+Date.now();

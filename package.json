@@ -27,7 +27,11 @@
     "stylus": "*"
   },
   "main": "app.js",
-  "devDependencies": {},
+  "devDependencies": {
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "react-tools": "^0.13.3"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
