@@ -65,22 +65,9 @@ cloudinary.config({
 //index
 
 app.get('/', function(req, res){
-  this.db.collection('employees').find().toArray(function(err, emps) {
-   /*
-    res.render('index', {
-      title: 'My Profile Page',
-      employees:emps,
-      cloudinary_obj:cloudinary
-    });
-    */
-    cloudinary.api.resources(function(items){
-    res.render('index', {
-        title: 'My Profile Page',
-        employees:emps,
-        cloudinary_obj:cloudinary
-      });
-    });
-    
+  res.render('index', {
+    title: 'My Profile Page',
+    cloudinary_obj:cloudinary
   });
 });
 

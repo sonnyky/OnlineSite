@@ -1,3 +1,4 @@
+"use strict";
 /// <reference path="./thirdparty/jquery.d.ts" />
 /// <reference path="./util/touchClass.ts" />
 /**
@@ -5,17 +6,11 @@
 */
 var page;
 (function (page) {
-    var pageControl = (function () {
+    var pageControl = /** @class */ (function () {
         function pageControl() {
             var i;
             var $ = jQuery;
             var topPageParam = [
-                {
-                    target: '#welcome-text-div',
-                    callback_end: function () {
-                        location.href = "/profile";
-                    }
-                },
                 {
                     target: '#work-button',
                     callback_end: function () {
@@ -35,7 +30,6 @@ var page;
             }
         }
         return pageControl;
-    })();
+    }());
     page.pageControl = pageControl;
 })(page || (page = {}));
-//# sourceMappingURL=topPage.js.map

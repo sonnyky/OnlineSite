@@ -1,3 +1,4 @@
+"use strict";
 /// <reference path="./thirdparty/jquery.d.ts" />
 /// <reference path="./util/touchClass.ts" />
 /**
@@ -5,7 +6,7 @@
 */
 var file;
 (function (file) {
-    var fileUtil = (function () {
+    var fileUtil = /** @class */ (function () {
         function fileUtil() {
             this.listenToButton();
         }
@@ -23,7 +24,6 @@ var file;
             console.log("File Uploaded!");
         };
         return fileUtil;
-    })();
+    }());
     file.fileUtil = fileUtil;
 })(file || (file = {}));
-//# sourceMappingURL=fileUtil.js.map

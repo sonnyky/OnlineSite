@@ -1,11 +1,25 @@
 body
 {
-	background-color:#ecdede;
+	background-color:#bbecf6;
 	margin-top:0px;
 	margin-bottom:0px;
 	margin-left:0px;
 	margin-right:0px;
 }
+
+.emphasis_text{
+	font-weight:bold; 
+	font-style:italic;
+	color: black
+}
+
+.inline_img {
+	display: inline;
+	margin: 0 0.5em;
+	padding: 0;
+	vertical-align: baseline;
+	height: 1.3em
+  }
 
 .menu_div{
 	margin-top: 5px;

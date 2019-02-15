@@ -11,12 +11,6 @@ module page{
 			var $=jQuery;
 			var topPageParam = [
 			{
-				target:'#welcome-text-div',
-				callback_end:function(){
-						location.href="/profile"
-					}
-			},
-			{
 				target:'#work-button',
 				callback_end:function(){
 						location.href="/profile"

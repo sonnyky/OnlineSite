@@ -2,14 +2,27 @@ extends layout
 
 block content
 	#top-nav-page.top_nav_page
-		#navigation-menu.menu_div
-			#work-button.button
+		//#navigation-menu.menu_div
+			//#work-button.button
 				p Work
 			//#others-button.button
 				p Others
 		#background.landing_page
-			#welcome-text-div Thank you for taking the time to get to know me
-			img(src="images/buildings.png" style="width:90%; margin-top:10%; margin-left:5%; bottom:50px")
+			#welcome-text-div What shall we build today?
+			//img(src="images/buildings.png" style="width:90%; margin-top:10%; margin-left:5%; bottom:50px")
+	
+	.flexbox-container
+		#photo
+			img(src="images/prof2.jpg" alt="my profile image")
+
+	#software-services-text.body_of_text
+		p I make software for
+			img.inline_img(src="images/Icons/pc.png" alt="pc")
+			| and
+			img.inline_img(src="images/Icons/mobile.png" alt="pc")
+		p Maybe I can 
+			span.emphasis_text help 
+			| ?
 			
 	//#employees
 		- each employee in employees
