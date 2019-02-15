@@ -21,14 +21,15 @@ body{
   text-align: center;
   font-family: PTSansWebRegular;
   font-size: 2em;
-  color:#abbad0
+  color:#696969
 }
 
 .normal_text{
+  margin-top: 5%;
   margin-bottom: 5%;
   margin-left: auto;
   text-align: center;
-  color:#abbad0 ;
+  color:#696969 ;
   font-size: 1.5em;
   font-family: PTSansWebRegular
 }

@@ -62,18 +62,16 @@ body
 }
 
 select{
-	color: #B3B3B3;
+	color: #696969;
+	padding-left: 2%;
 	margin-top: 5px;
-	  height: 60px;
-	  width: 100px;
-	  font-size: 20px;
-	  border: 1px solid #B3B3B3;
-	  border-radius: 4px;
-	  -webkit-appearance: none;
-	  -moz-appearance: none;
-	  appearance: none;
-	  text-indent: .01px;
-	  text-overflow: "";
-	  background: #FFF url(../images/select_arrow.png) no-repeat;
-	  background-position: right 3px center; 
+	height: 60px;
+	width: 100px;
+	font-size: 20px;
+	border: 1px solid #696969;
+	border-radius: 4px;
+	-webkit-appearance: none;
+	background: url(../images/select_arrow.png) no-repeat;
+	background-size: 20%;
+	background-position: 95%; 
   }

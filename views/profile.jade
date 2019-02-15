@@ -11,25 +11,13 @@ block append head
 block content
 	.flexbox-container
 		
-		#introDiv
-			p#nameText Sonny Kurniawan
-	
-	.flexbox-container
-		#personal_contacts
 			#language_selector
 				select(id="lang_sel")
 					option(value="english") English
 					option(value="japanese") Japanese
 					option(value="chinese") Chinese
 					option(value="indonesian") Indonesian
-			#contacts
-				p
-					span(class="glyphicon glyphicon-envelope", style="margin-right:10px")
-					| sonny_yap@hotmail.com
-		
-					br
-					span(class="glyphicon glyphicon-phone", style="margin-right:10px")
-					| 090-1958-6549
+			
 		#firstEntry.entry
 			#aboutMe.entryTitle
 				h1 About Me
@@ -82,6 +70,14 @@ block content
 				h2 HTML/CSS, Javascript
 				h2 OpenCV, OpenGL, jQuery, and various other libraries
 				h2 NodeJS
+
+	#contact_fb.normal_text
+		a(href="https://www.facebook.com/sonny.yap")
+			img.inline_img(src="images/Icons/fb.png" alt="pc")
+		a(href="mailto:sonny.kurniawan.yap@gmail.com")
+			img.inline_img(src="images/Icons/mail.png" alt="pc")
+		a(href="https://twitter.com/YapSonny")
+			img.inline_img(src="images/Icons/twitter.png" alt="pc")
 
 	#english_wrapper
 		#firstEntryEnglish.entry
