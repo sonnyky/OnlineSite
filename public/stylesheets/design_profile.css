@@ -58,13 +58,14 @@ h2{
 
 /*The DIV that shows full name on top of page*/
 #introDiv{
-	height:30%; color:#FFFFFF; margin:10px; background-color: white
+	height:30%; 
+	color:#FFFFFF;
+	background-color: white
 }
 
 div.entry{
 	width:100%;
 	color:#121212;
-	margin:10px;
 	padding: 5%;
 	background-color: white;
 	-webkit-box-shadow: 0 8px 6px -6px black;
@@ -74,7 +75,6 @@ div.entry{
 #personal_contacts{
 	width:100%;
 	color:#121212;
-	margin:10px;
 	background-color: white;
 	-webkit-box-shadow: 0 8px 6px -6px black;
 	   -moz-box-shadow: 0 8px 6px -6px black;
@@ -112,8 +112,7 @@ div.entryContent{
 
 body
 {
-	background-color:#ECEFF1;
-	max-width: 75%;
+	max-width: 85%;
 	margin:auto;
 	font-family:Aller;
 	font-size:20px;

@@ -12,7 +12,7 @@ var page;
             var $ = jQuery;
             var topPageParam = [
                 {
-                    target: '#work-button',
+                    target: '#profile-button',
                     callback_end: function () {
                         location.href = "/profile";
                     }

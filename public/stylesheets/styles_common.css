@@ -60,3 +60,20 @@ body
     cursor: inherit;
     display: block;
 }
+
+select{
+	color: #B3B3B3;
+	margin-top: 5px;
+	  height: 60px;
+	  width: 100px;
+	  font-size: 20px;
+	  border: 1px solid #B3B3B3;
+	  border-radius: 4px;
+	  -webkit-appearance: none;
+	  -moz-appearance: none;
+	  appearance: none;
+	  text-indent: .01px;
+	  text-overflow: "";
+	  background: #FFF url(../images/select_arrow.png) no-repeat;
+	  background-position: right 3px center; 
+  }
