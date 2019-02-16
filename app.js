@@ -77,6 +77,12 @@ app.get('/profile', function(req, res){
     });
 });
 
+app.get('/work', function(req, res){
+  res.render('work', { 
+    title: 'Work' 
+  });
+});
+
 app.get('/howto_graphit', function(req, res){
     res.render('howto_graphit', { 
       title: 'How To Use Graph It' 
