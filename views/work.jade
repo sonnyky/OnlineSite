@@ -1,0 +1,42 @@
+extends layout
+
+block append head
+	<meta property="og:title" content="My Profile" />
+	<meta property="og:description" content="More details about me" />
+	<meta property="og:url" content="https://ancient-harbor-5436.herokuapp.com/profile" />
+	<meta property="og:image" content="http://ancient-harbor-5436.herokuapp.com/images/my_logo.jpg" />
+	link(rel='stylesheet', href='/stylesheets/work.css')
+	link(rel='stylesheet', href='/stylesheets/smartphones-portrait.css')
+
+block content
+	#page-title.entryTitle
+		h1 Interactive Entertainment Installations
+	.flexbox-container
+		.pf_card
+			img(src="images/work/sandparty.jpg" style="width:100%")
+			.pf_card_text
+				| SANDPARTY! (2016)
+				br
+				| Using depth sensors to project colors based on sand height.
+		.pf_card
+			img(src="images/work/dyw.jpg" style="width:100%")
+			.pf_card_text
+				| DRAW YOUR WORLD! (2017)
+				br
+				| Scans doodles and make them come alive.
+	.flexbox-container
+		.pf_card
+			img(src="images/work/word_adventure.jpg" style="width:100%")
+			.pf_card_text
+				| WORD ADVENTURE (2017)
+				br
+				| Using laser range sensor to convert wall into a touch screen for block puzzle game.
+	.entryTitle
+		h1 Others
+	.flexbox-container
+		.pf_card
+			img(src="images/work/kongoji.png" style="width:100%")
+			.pf_card_text
+				| MEMBERSHIP APP (2018)
+				br
+				| App to display membership data based on ID input or NFC (member's card)

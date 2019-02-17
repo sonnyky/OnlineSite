@@ -1,7 +1,7 @@
 {
   "name": "online-resume",
-  "description": "hello world test app",
-  "version": "0.0.1",
+  "description": "Online Resume Site",
+  "version": "0.0.2",
   "private": true,
   "engines": {
     "node": "6.11.1",
@@ -18,8 +18,8 @@
     "http": "0.0.0",
     "jade": "*",
     "method-override": "*",
-    "mongodb": "*",
     "morgan": "*",
+    "mongodb": "3.1.12",
     "multer": "^1.1.0",
     "path": "^0.12.7",
     "routes": "^2.1.0",

@@ -2,14 +2,40 @@ extends layout
 
 block content
 	#top-nav-page.top_nav_page
-		#navigation-menu.menu_div
-			#work-button.button
+		//#navigation-menu.menu_div
+			//#work-button.button
 				p Work
 			//#others-button.button
 				p Others
 		#background.landing_page
-			#welcome-text-div Thank you for taking the time to get to know me
-			img(src="images/buildings.png" style="width:90%; margin-top:10%; margin-left:5%; bottom:50px")
+			#welcome-text-div What shall we build today?
+			//img(src="images/buildings.png" style="width:90%; margin-top:10%; margin-left:5%; bottom:50px")
+	
+	.flexbox-container
+		#photo
+			img(src="images/prof2.jpg" alt="my profile image")
+
+	#software-services-text.offer_text
+		p I make software for
+			img.inline_img(src="images/Icons/pc.png" alt="pc")
+			| and
+			img.inline_img(src="images/Icons/mobile.png" alt="pc")
+		p Maybe I can 
+			span.emphasis_text help 
+			| ?
+	
+	#profile_details.normal_text
+		p My profile
+		img.inline_img#profile-button(src="images/Icons/profile.png" alt="profile")
+
+	#contact_fb.normal_text
+		p Contact me
+		a(href="https://www.facebook.com/sonny.yap")
+			img.inline_img(src="images/Icons/fb.png" alt="pc")
+		a(href="mailto:sonny.kurniawan.yap@gmail.com")
+			img.inline_img(src="images/Icons/mail.png" alt="pc")
+		a(href="https://twitter.com/YapSonny")
+			img.inline_img(src="images/Icons/twitter.png" alt="pc")
 			
 	//#employees
 		- each employee in employees

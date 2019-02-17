@@ -10,18 +10,13 @@ src: url("../fonts/OstrichRegular.ttf");
 }
 
 @font-face {
-font-family: OstrichLight;
-src: url("../fonts/ostrich-sans/OstrichLight.ttf");
+font-family: LatoRegular;
+src: url("../fonts/Lato-Regular.ttf");
 }
 
 @font-face {
-font-family: Goudy;
-src: url("../fonts/Goudy-Bookletter-1911/goudy_bookletter_1911-webfont.ttf");
-}
-
-@font-face {
-font-family: Yasashisa;
-src: url("../fonts/07Yasashisa/yasashisa.ttf");
+font-family: PontanoSansRegular;
+src: url("../fonts/PontanoSans-Regular.ttf");
 }
 
 @font-face {
@@ -30,16 +25,11 @@ src: url("../fonts/Aller_Rg.ttf");
 }
 
 @font-face {
-font-family: BurstMyBubble;
-src: url("../fonts/burst_my_bubble/BurstMyBubble.ttf");
+font-family: PTSansWebRegular;
+src: url("../fonts/PT_Sans-Web-Regular.ttf");
 }
 
 @font-face {
 font-family: Cantarell;
 src: url("../fonts/Cantarell/Cantarell-Regular.ttf");
-}
-
-@font-face {
-font-family: ChunkFive;
-src: url("../fonts/ChunkFive/ChunkFive.otf");
 }

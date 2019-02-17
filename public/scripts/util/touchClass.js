@@ -1,7 +1,8 @@
+"use strict";
 /// <reference path="../ThirdParty/jquery.d.ts" />
 var util;
 (function (util) {
-    var touchClass = (function () {
+    var touchClass = /** @class */ (function () {
         function touchClass(param) {
             this.target = param.target ? param.target : " ";
             this.callback_end = param.callback_end ? param.callback_end : function () { };
@@ -22,4 +23,3 @@ var util;
     }());
     util.touchClass = touchClass;
 })(util || (util = {}));
-//# sourceMappingURL=touchClass.js.map

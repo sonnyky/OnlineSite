@@ -20,6 +20,7 @@ module profilePage{
 			var $ = jQuery;
 			var sel:string;
 			var mode_string:string;
+			mode_string = "default";
 
 			switch(sel){
 				case 'english':
