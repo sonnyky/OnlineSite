@@ -4,10 +4,10 @@ body{
 #welcome-text-div{
   margin-left: auto;
   margin-right: auto;
-  margin-top:10%;
+  margin-top:5%;
   padding-top:5%;
   padding-bottom: 5%;
-  background-color:#494545;
+  background-color:#abbad0;
   text-align:center;
   color:#ffffff;
 }
@@ -15,10 +15,66 @@ body{
     text-decoration: none;
 }
 
-.top_nav_area{
+.offer_text{
+  margin-left: auto;
+  margin-bottom: 10%;
+  text-align: center;
+  font-family: PTSansWebRegular;
+  font-size: 2em;
+  color:#696969
+}
+
+.normal_text{
+  margin-top: 5%;
+  margin-bottom: 5%;
+  margin-left: auto;
+  text-align: center;
+  color:#696969 ;
+  font-size: 1.5em;
+  font-family: PTSansWebRegular
+}
+
+/*The DIV that shows photo*/
+div#photo{
+margin-bottom: 5%;
+	margin-top: 5%;
+}
+div#photo img{
+	width: 40%;
+  max-width: 100%;
+  max-height: 100%;
+  margin: auto;
+  display: block;
+  border-radius: 50%;
+  transform: rotate(-90deg)
+}
+
+div.landing_page#background
+{
+  width:100%;
+  height:auto;
   position:relative;
-  height:10%;
-  background-color:#ecdede;
+}
+
+div.freeDiv {
+  border:dotted;
+  border-color:#000000;
+  left:50%;
+  position:absolute;
+}
+
+div.transbox
+{
+  width:250px;
+  height:20px;
+  margin-left:3%;
+  margin-top:255px;
+  background-color:#ffffff;
+  position:absolute;
+  font-family:Weston, Sans-Serif;
+  font-size:x-large;
+  opacity:0.9;
+  filter:alpha(opacity=9); /* For IE8 and earlier */
 }
 
 /*Smartphones, portrait, using max-width;320px converted into EM */
@@ -30,8 +86,12 @@ and (max-device-width : 20em){
     border : 1px solid #00ff00;
   }
   #welcome-text-div{
-    font-size: 40px;
+    font-size: 30px;
   }
+  .offer_text{   
+    font-size: 1.5em;
+  }
+  
   .menu_div nav ul li{
    font-size: 25px;
  }
@@ -47,7 +107,10 @@ and (min-device-width : 21em){
     border : 1px solid #ffff00;
   }
   #welcome-text-div{
-    font-size: 50px;
+    font-size: 40px;
+  }
+  .offer_text{   
+    font-size: 1.5em;
   }
 }
 
@@ -80,7 +143,7 @@ and (max-device-width : 1024px)
 and (orientation : portrait) {
   /* Styles */
    #welcome-text-div{
-    font-size: 70px;
+    font-size: 60px;
   }
 }
 
@@ -89,7 +152,10 @@ and (orientation : portrait) {
 and (min-width : 1224px) {
   /* Styles */
    #welcome-text-div{
-    font-size: 100px;
+    font-size: 90px;
+  }
+  div#photo img{
+    width: 30%;
   }
 }
 
@@ -107,33 +173,3 @@ only screen and (min-device-pixel-ratio : 1.5) {
 }
 
 
-div.landing_page#background
-{
-  background-color:#ecdede;
-  width:100%;
-  height:auto;
-  position:relative;
-}
-
-div.freeDiv {
-  border:dotted;
-  border-color:#000000;
-  left:50%;
-  position:absolute;
-}
-
-
-
-div.transbox
-{
-  width:250px;
-  height:20px;
-  margin-left:3%;
-  margin-top:255px;
-  background-color:#ffffff;
-  position:absolute;
-  font-family:Weston, Sans-Serif;
-  font-size:x-large;
-  opacity:0.9;
-  filter:alpha(opacity=9); /* For IE8 and earlier */
-}

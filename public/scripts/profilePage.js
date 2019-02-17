@@ -1,10 +1,11 @@
+"use strict";
 /// <reference path="./thirdparty/jquery.d.ts" />
 /// <reference path="./util/touchClass.ts" />
 // <reference path="./util/tsUnit.ts" />
 // <reference path="./util/languageTest.ts" />
 var profilePage;
 (function (profilePage) {
-    var profilePageClass = (function () {
+    var profilePageClass = /** @class */ (function () {
         function profilePageClass() {
             var _this = this;
             var $ = jQuery;
@@ -18,6 +19,7 @@ var profilePage;
             var $ = jQuery;
             var sel;
             var mode_string;
+            mode_string = "default";
             switch (sel) {
                 case 'english':
                     this.showEnglish();
@@ -93,4 +95,3 @@ var profilePage;
     }());
     profilePage.profilePageClass = profilePageClass;
 })(profilePage || (profilePage = {}));
-//# sourceMappingURL=profilePage.js.map
