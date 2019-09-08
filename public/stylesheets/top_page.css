@@ -1,59 +1,46 @@
-body{
-  font-family: OstrichRegular;
+#top-header{
+  background-color: #63ace5;
+  margin-bottom: 5%
 }
+
+.top-header-container {
+  display: flex;
+  }
+  .top-header-container > div {
+  flex: 1; /*grow*/
+  }
+
 #welcome-text-div{
   margin-left: auto;
   margin-right: auto;
   margin-top:5%;
   padding-top:5%;
   padding-bottom: 5%;
-  background-color:#abbad0;
   text-align:center;
-  color:#ffffff;
+  color: #3f3e3e;
+  font-family: PTSansWebRegular
 }
 .landing_page a{
     text-decoration: none;
 }
 
-.offer_text{
-  margin-left: auto;
-  margin-bottom: 10%;
-  text-align: center;
-  font-family: PTSansWebRegular;
-  font-size: 2em;
-  color:#696969
-}
-
 .normal_text{
-  margin-top: 5%;
-  margin-bottom: 5%;
-  margin-left: auto;
-  text-align: center;
   color:#696969 ;
-  font-size: 1.5em;
-  font-family: PTSansWebRegular
+  font-family: PTSansWebRegular;
+  margin-bottom: 5%
 }
 
 /*The DIV that shows photo*/
 div#photo{
-margin-bottom: 5%;
-	margin-top: 5%;
+  margin: 5%
 }
 div#photo img{
-	width: 30%;
   max-width: 100%;
   max-height: 100%;
   margin: auto;
   display: block;
   border-radius: 50%;
   transform: rotate(-90deg)
-}
-
-div.landing_page#background
-{
-  width:100%;
-  height:auto;
-  position:relative;
 }
 
 div.freeDiv {
@@ -88,7 +75,7 @@ and (max-device-width : 20em){
   #welcome-text-div{
     font-size: 30px;
   }
-  .offer_text{   
+  .offer{   
     font-size: 1.5em;
   }
   
@@ -107,10 +94,14 @@ and (min-device-width : 21em){
     border : 1px solid #ffff00;
   }
   #welcome-text-div{
-    font-size: 40px;
+    font-size: 2em;
   }
-  .offer_text{   
-    font-size: 1.5em;
+  .offer{   
+    font-size: 1em;
+  }
+  .normal_text{
+    margin-top: 5%;
+    font-size: 1em;
   }
 }
 
@@ -151,11 +142,31 @@ and (orientation : portrait) {
 @media only screen 
 and (min-width : 1224px) {
   /* Styles */
+
+  .container {
+    display: flex;
+    }
+    .container > div {
+    flex: 1; /*grow*/
+    margin-left: 5%;
+    margin-right: 5%
+    }
+  
    #welcome-text-div{
     font-size: 90px;
   }
+
+  .normal_text{
+    margin-top: 5%
+  }
+
   div#photo img{
-    width: 30%;
+    max-width: 50%;
+    max-height: 50%;
+    margin: auto;
+    display: block;
+    border-radius: 50%;
+    transform: rotate(-90deg)
   }
 }
 

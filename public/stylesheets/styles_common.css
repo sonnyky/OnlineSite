@@ -1,16 +1,23 @@
 body
 {
-	background-color:#bbecf6;
-	margin-top:0px;
-	margin-bottom:0px;
-	margin-left:0px;
-	margin-right:0px;
+	background-color:#e7eff6;
+}
+
+.name{
+	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	color: rgb(42, 31, 105)
 }
 
 .emphasis_text{
 	font-weight:bold; 
 	font-style:italic;
-	color: black
+	color: rgb(63, 91, 184)
+}
+
+.title{
+	font-weight:bold;
+	font-size: 1.5em;
+	color: rgb(63, 91, 184)
 }
 
 .inline_img {
@@ -18,7 +25,28 @@ body
 	margin: 0 0.5em;
 	padding: 0;
 	vertical-align: baseline;
-	height: 1.3em
+	height: 1em
+  }
+
+  .inline_img_title {
+	margin-right: 0.5em;
+	display: inline;
+	padding: 0;
+	vertical-align: baseline;
+	height: 1em
+  }
+
+  .fade-in-section {
+	opacity: 0;
+	transform: translateY(20vh);
+	visibility: hidden;
+	transform: opacity 0.6s ease-out, transform 1.2s ease-out;
+	will-change: opacity, visibility;
+  }
+  .fade-in-section.is-visible {
+	opacity: 1;
+	transform: none;
+	visibility: visible;
   }
 
 .menu_div{
