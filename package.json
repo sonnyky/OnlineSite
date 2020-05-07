@@ -28,7 +28,9 @@
     "minimist": ">=0.2.1",
     "constantinople": ">=3.1.1",
     "fresh": ">=0.5.2",
-    "send": ">=0.11.1"
+    "send": ">=0.11.1",
+    "lodash": ">=4.17.12",
+    "clean-css": ">=4.1.11"
   },
   "main": "app.js",
   "devDependencies": {
