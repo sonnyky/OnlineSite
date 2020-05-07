@@ -1,61 +1,62 @@
 extends layout
 
 block content
-	#top-nav-page.top_nav_page
-		//#navigation-menu.menu_div
-			//#work-button.button
-				p Work
-			//#others-button.button
-				p Others
-		#background.landing_page
-			#welcome-text-div What shall we build today?
-			//img(src="images/buildings.png" style="width:90%; margin-top:10%; margin-left:5%; bottom:50px")
-	
-	.flexbox-container
-		#photo
-			img(src="images/prof2.jpg" alt="my profile image")
+	#top-header
+		.top-header-container
+			#background.landing_page.two-column-left
+				#welcome-text-div 
+					p Hello, I'm
+					span.name Sonny Kurniawan
+		
+			.flexbox-container.two-column-right
+				#photo
+					img(src="images/prof2.jpg" alt="my profile image")
 
-	#software-services-text.offer_text
-		p I make software for
-			img.inline_img(src="images/icons/pc.png" alt="pc")
-			| and
-			img.inline_img(src="images/icons/mobile.png" alt="pc")
-		p Maybe I can 
-			span.emphasis_text help 
-			| ?
-	
-	#profile_details.normal_text
-		p My profile
-		img.inline_img#profile-button(src="images/icons/profile.png" alt="profile")
+	#top-contents.container
 
-	#dev_works.normal_text
-		p You can see some of my work #[a(href="/work") here].
+		#software-services-text.normal_text
+			#title.title 
+				img.inline_img_title(src="images/icons/about_me.png" alt="pc")
+				| About Me
+			.content
+				p I have rich experience in the software industry building software for
+					img.inline_img(src="images/icons/pc.png" alt="pc")
+					| and
+					img.inline_img(src="images/icons/mobile.png" alt="pc")
+					|.
+					br
+					| I currently specialise in interactive content using sensor input such as cameras, laser range finders
+					| and various other analog sensors. 
+					|Maybe I can 
+					span.emphasis_text help 
+					| ?
+					br
+					| You can also check out my past experiences here : 
+					img.inline_img_title#profile-button(src="images/icons/profile.png" alt="pc")
+		
+		#services.normal_text
+			#services.title 
+				img.inline_img_title(src="images/icons/work.png" alt="profile")
+				| Services
+			.content
+				#dev_works
+					| Games, IoT, Web/Native applications, I provide a wide range of software/hardware solutions.
+					br 
+					| You can see some of my work #[a(href="/work" class="emphasis_text") here] or contact me for further details.
 
-	#contact_fb.normal_text
-		p Contact me
-		a(href="https://www.facebook.com/sonny.yap")
-			img.inline_img(src="images/icons/fb.png" alt="pc")
-		a(href="mailto:sonny.kurniawan.yap@gmail.com")
-			img.inline_img(src="images/icons/mail.png" alt="pc")
-		a(href="https://twitter.com/YapSonny")
-			img.inline_img(src="images/icons/twitter.png" alt="pc")
-			
-	//#employees
-		- each employee in employees
-			div.employee
-				div.created_at= employee.created_at
-				div.title= employee.title 
-				div.name= employee.name
-				div.thumbnail-img
-					img(src=cloudinary_obj.url(employee.img_id, { width: 100, height: 100, crop: 'fill'}))
-				form( method="post", action="/employee/:id/delete") 
-					input(name="_id", type="hidden", value=employee._id.toHexString()) 
-					input(id="delete", value="X", type="submit")
-				form( method="get", action="/employee/:id/edit") 
-					input(name="_id", type="hidden", value=employee._id.toHexString()) 
-					input(id="edit", value="Edit", type="submit")
+		#contact.normal_text
+			#contact.title
+				img.inline_img_title(src="images/icons/contact.png" alt="profile")
+				| Contact me
+			.content
+				p Feel free to contact me on any software needs you may have and we can sort it out together.
+				a(href="https://www.facebook.com/sonny.yap")
+					img.inline_img(src="images/icons/fb.png" alt="pc")
+				a(href="mailto:sonny.kurniawan.yap@gmail.com")
+					img.inline_img(src="images/icons/mail.png" alt="pc")
+				a(href="https://twitter.com/YapSonny")
+					img.inline_img(src="images/icons/twitter.png" alt="pc")
 					
-	//a(href="/employee/new")!= "Add New Employee"
 block scripts
 	script(src="/scripts/topPage.js")
 	script.
