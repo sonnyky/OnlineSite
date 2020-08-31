@@ -10,7 +10,7 @@
   "dependencies": {
     "body-parser": "*",
     "cloudinary": "^1.3.0",
-    "connect": "1.8.5",
+    "connect": "3.0.0",
     "connect-busboy": ">=0.0.2",
     "errorhandler": "*",
     "express": ">=4.8.2",
